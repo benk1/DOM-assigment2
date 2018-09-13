@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+  }
+  #para1{
+    text-align: center;
+  }
+  #para2{
+    text-align: center;
+    font-size: 10px;
+  }
+  .input{
+    text-align: center;
+  }
+  #startingWord{
+    text-align: center;
+    margin: 10px;
+  }
+  #searchWithWord{
+    text-align: center;
+  }
+  #Search{
+    text-align: center;
+    margin-left: 300px;
+    width: 700px;
+   margin-top: 10px;
+    
+  }
+  #loopDiv2{
+    width: 700px;
+    text-align: center;
+    margin-left: 300px;
+    height: 40px;
+    line-height: 40px;
+  }
+  #loopDiv{
+    width: 700px;
+    text-align: center;
+    margin-left: 300px;
+    height: 40px;
+    line-height: 40px;
+  }
+  button{
+    background-color: #F6FFCF;
+  }
