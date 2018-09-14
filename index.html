@@ -7,20 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="dom2.css" media="screen"/>
 </head>
-<style>
-    
-  </style>
+
 <body>
    <div class="input">
-      <p id="para1"><b>Total Number of countries is 208<b></p>
-      <p id="para2">Countries start with are 208</p>
-      <button id="button1" onclick="generateFunction()">Search with start word</button>
-      <button id="button2" onclick="generate2Function()">Search with multiple words</button>
-      </div>
-      <input id="Search" type="text" placeholder="Search Country...">
-      <script src="dom2.js">
+     <p id="para1"><b>World Countries List<b></p>
+     <div id="totalCountries"></div>  
+     <button id="button1" onclick="generateFunction()">Search with start word</button>
+    <button id="button2" onclick="generate2Function()">Search with multiple words</button>
+   </div>
+
+
+  <input id="Search" type="text" placeholder="Search Country..." onkeyup="myFunction()">
+      
+  <script src="dom2.js">
 </body>
-<script>
-  
-</script>
 </html>
