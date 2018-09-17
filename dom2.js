@@ -20,7 +20,7 @@ let wrapper = document.createElement('div');
 
 
 let totalNumberOfCountries = document.createElement('p');
-totalNumberOfCountries.id = "parag2"
+totalNumberOfCountries.id = "parag2";
 totalNumberOfCountries.textContent = `Total Number of countries is: ${countries.length}`;
 
 let totalCountries = document.getElementById('totalCountries');
@@ -33,12 +33,7 @@ totalCountries.appendChild(totalNumberOfCountries);
       generate2Function();
     }
 
-    function myFunction() {
-     let keyUp = document.getElementById("Search").value;
-       
-    }
-
-
+     
   function generateFunction() {
     countriesNames(); 
   }
@@ -57,8 +52,10 @@ return result;
  
 function countriesNames(){
 let newArray = [];
-let inputText = document.querySelector('#Search').value.toUpperCase();
-newArray = countries.filter((country) => country.startsWith(inputText));
+let inputText = document.querySelector('#Search');
+let inputValue = inputText.value.toUpperCase();
+
+newArray = countries.filter((country) => country.startsWith(inputValue));
 wrapper.innerHTML = "";
 
 let numOfresults = document.createElement('p');
@@ -78,8 +75,9 @@ newArray.forEach((element) => {
 
 function countriesNames2(){
 let newArray = [];
-let inputText = document.querySelector('#Search').value.toLowerCase();
-newArray = countries.filter((country) => country.toLowerCase().includes(inputText));
+let inputText2 = document.querySelector('#Search');
+let inputValue = inputText.value.toLowerCase();
+newArray = countries.filter((country) => country.toLowerCase().includes(inputValue));
 wrapper.innerHTML = "";
 
 let numOfresults = document.createElement('p');
@@ -95,4 +93,20 @@ newArray.forEach((element) => {
   wrapper.appendChild(singleDiv);
    });
 } 
-console.log(wrapper.firstChild);
+
+
+let inputText = document.querySelector('#Search');
+inputText.addEventListener("input", function() {
+  countriesNames(); 
+  
+  countriesNames2();
+  
+});
+//countriesNames();
+
+/*let inputText = document.querySelector('#Search');
+inputText.addEventListener("input", generate2Function())  //{
+  //countriesNames2();
+//});
+//countriesNames2();*/
+
