@@ -27,21 +27,6 @@ let totalCountries = document.getElementById('totalCountries');
 totalCountries.appendChild(totalNumberOfCountries);
 
    
-    if(button1.clicked === true){
-      generateFunction();
-    } else if(button2.clicked === true){
-      generate2Function();
-    }
-
-     
-  function generateFunction() {
-    countriesNames(); 
-  }
-
-  function generate2Function() {
-    countriesNames2(); 
-  }
-
 function randomHexaNumberGenerator(num){
 let result = "#";
 for(let i = 0; i < 6; i++){
@@ -49,7 +34,7 @@ result += Math.floor(Math.random() * 16).toString(16);
 }
 return result;
 }
- 
+
 function countriesNames(){
 let newArray = [];
 let inputText = document.querySelector('#Search');
@@ -75,8 +60,9 @@ newArray.forEach((element) => {
 
 function countriesNames2(){
 let newArray = [];
-let inputText2 = document.querySelector('#Search');
+let inputText = document.querySelector('#Search');
 let inputValue = inputText.value.toLowerCase();
+ 
 newArray = countries.filter((country) => country.toLowerCase().includes(inputValue));
 wrapper.innerHTML = "";
 
@@ -96,17 +82,21 @@ newArray.forEach((element) => {
 
 
 let inputText = document.querySelector('#Search');
-inputText.addEventListener("input", function() {
-  countriesNames(); 
-  
-  countriesNames2();
-  
+inputText.addEventListener("keyup", function(e) {
+  e.preventDefault();
+  let button1 = document.querySelector('#button1');
+  if(button1.checked === true){
+    countriesNames();
+  } else {
+    countriesNames2();
+  }
+    
 });
-//countriesNames();
 
-/*let inputText = document.querySelector('#Search');
-inputText.addEventListener("input", generate2Function())  //{
-  //countriesNames2();
-//});
+/* inputText = document.querySelector('#Search');
+inputText.addEventListener("keyup", function() {
+  countriesNames2();
+});
+
 //countriesNames2();*/
 
