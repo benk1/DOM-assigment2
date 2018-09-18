@@ -80,10 +80,11 @@ newArray.forEach((element) => {
    });
 } 
 
+countriesNames();
 
 let inputText = document.querySelector('#Search');
 inputText.addEventListener("keyup", function(e) {
-  e.preventDefault();
+  //e.preventDefault();
   let button1 = document.querySelector('#button1');
   if(button1.checked === true){
     countriesNames();
@@ -93,10 +94,4 @@ inputText.addEventListener("keyup", function(e) {
     
 });
 
-/* inputText = document.querySelector('#Search');
-inputText.addEventListener("keyup", function() {
-  countriesNames2();
-});
-
-//countriesNames2();*/
 
